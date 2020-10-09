@@ -1,5 +1,39 @@
+// Constants
+const inquirer = require("inquirer");
+const fs = require("fs");
+const util = require("util");
+
 // array of questions for user
-const questions = [
+const questions = [{
+    type: "input",
+    name: "name",
+    message: "What is the ?"
+  },
+  {
+    type: "input",
+    name: "name",
+    message: "What is your name?"
+  },
+  {
+    type: "input",
+    name: "name",
+    message: "What is your name?"
+  },
+  {
+    type: "input",
+    name: "name",
+    message: "What is your name?"
+  },
+  {
+    type: "input",
+    name: "name",
+    message: "What is your name?"
+  },
+  {
+    type: "input",
+    name: "name",
+    message: "What is your name?"
+  },
 
 ];
 
