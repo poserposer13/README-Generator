@@ -16,12 +16,6 @@ const questions = [{
     message: "Give a description of the application"
   },
   {
-    type: "list",
-    name: "contents",
-    message: "What are the contents of this README?",
-    choices: ["Installation", "Usage", "License", "Contributing", "Tests", "Questions"]
-  },
-  {
     type: "input",
     name: "installation",
     message: "How does a user install this application?"
@@ -35,7 +29,7 @@ const questions = [{
     type: "list",
     name: "license",
     message: "What license does this application use?",
-    choices: ["Apache", "MIT", "Mozilla"]
+    choices: ["Apache", "MIT", "GNU GPLv3"]
   },
   {
     type: "input",
@@ -47,8 +41,18 @@ const questions = [{
     name: "tests",
     message: "What tests did you run on the application?"
   },
-
+  {
+    type: "input",
+    name: "github",
+    message: "What is your GitHub?"
+  },
+  {
+    type: "input",
+    name: "email",
+    message: "What email do you want people to contact you with questions?"
+  },
 ];
+const answers = inquirer.prompt(questions);
 
 
 // function to write README file
