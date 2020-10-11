@@ -2,10 +2,15 @@
 const inquirer = require("inquirer");
 const fs = require("fs");
 const util = require("util");
-const generateMarkdown = require("./utils/generateMarkdown.js")
+const generateMarkdown = require("./utils/generateMarkdown.js");
 
+const writeFileAsync = util.promisify(fs.writeFile);
+
+// Creating a function for the User Questions
+function promptUser(){
 // array of questions for user
-const questions = [{
+return inquirer.prompt([
+  {
     type: "input",
     name: "title",
     message: "What is the title of this application?"
@@ -51,17 +56,20 @@ const questions = [{
     name: "email",
     message: "What email do you want people to contact you with questions?"
   },
-];
-const answers = inquirer.prompt(questions);
-
+]);
+}
 
 // function to write README file
 function writeToFile(fileName, data) {
+  
+writeFileAsync(fileName, data)
+let fileName = "README.md";
+let data = generateMarkdown.generateMarkdown(answers)
 }
 
 // function to initialize program
 function init() {
-
+writeToFile();
 }
 
 // function call to initialize program

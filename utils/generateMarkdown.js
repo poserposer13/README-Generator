@@ -4,6 +4,7 @@ function generateMarkdown(data) {
   # ${data.title}
   ![License](https://img.shields.io/badge/License-${data.license}-brightgreen.svg)
 
+  
 `;
 }
 
