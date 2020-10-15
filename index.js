@@ -3,9 +3,18 @@ const inquirer = require("inquirer");
 const fs = require("fs");
 const util = require("util");
 const generateMarkdown = require("./utils/generateMarkdown.js");
-const { resolve } = require("path");
 
-const writeFileAsync = util.promisify(fs.writeFile);
+
+// function to write README file
+function writeToFile(fileName, data) {
+  fs.writeFile(fileName, data, function(err){
+    if (err) {
+      return console.log(err);
+    }
+    console.log("README file create with your info!")
+  })
+  }
+  
 
 // Creating a function for the User Questions
 function promptUser() {
@@ -59,25 +68,18 @@ function promptUser() {
         message: "What email do you want people to contact you with questions?"
       },
     ])
-    .then(res => {
-console.log(res)
+    .then(data => {
+      // return data
+writeToFile("README.md", generateMarkdown(data), "utf8")
     });
 
 }
 
 
-
-// function to write README file
-async function writeToFile(fileName, data) {
-
-  // await writeFileAsync(fileName, data)
-
-}
-
 // function to initialize program
 function init() {
   promptUser();
-  // writeToFile("README.md", generateMarkdown(), "utf8");
+  
 }
 
 // function call to initialize program
