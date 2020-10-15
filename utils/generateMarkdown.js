@@ -18,6 +18,9 @@ function generateMarkdown(data) {
 ## Installation 
 ${data.installation}
 
+## Description
+${data.description}
+
 ## Usage
 ${data.usage}
 
@@ -36,6 +39,11 @@ Contact through email: ${data.email}
 
 ## License 
 This project is covered under the ${data.license} license.
+
+## Screenshots
+![Preview](assets/Preview.jpg)
+<br>
+![Command-Line](assets/Command-Line.jpg)
 `;
 
 

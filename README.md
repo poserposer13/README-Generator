@@ -14,10 +14,10 @@
 
 
 ## Installation 
-This application just needs node.js and a command terminal to run
+They will need to install node.js and a command terminal
 
 ## Usage
-The user will run the node index.js and that will provide them with these prompts. All the user has to do is answer them however they would like.
+They will run node index.js and they will answer the prompts in as little or much detail as they would like. 
 
 ## Credits / Contributing
 If someone has a great idea to add, they can contact me and I can add them to the GitHub Repo.
@@ -34,3 +34,11 @@ Contact through email: poserposer@me.com
 
 ## License 
 This project is covered under the MIT license.
+
+
+## Screenshots
+![Preview](assets/Preview.jpg)
+
+
+
+![Command-Line](assets/Command-Line.jpg)
